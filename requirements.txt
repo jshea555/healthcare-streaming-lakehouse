@@ -1,0 +1,10 @@
+# Placeholder - we'll pin exact, mutually-compatible versions in Phase 2
+# once we're actually writing the Kafka producer and the local Structured
+# Streaming Bronze job (PySpark, delta-spark, and the Kafka client library
+# all have to agree on versions, so we do this deliberately, not by guessing).
+#
+# pyspark==<TBD>
+# delta-spark==<TBD>
+# kafka-python==<TBD>
+# databricks-cli
+# python-dotenv

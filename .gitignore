@@ -1,0 +1,57 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.Python
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- Spark / Delta Lake runtime junk ----
+*.crc
+spark-warehouse/
+metastore_db/
+derby.log
+_delta_log/.tmp/
+
+# ---- Streaming checkpoints ----
+# Checkpoint state is runtime output, not source code - never commit it.
+**/checkpoints/
+**/_checkpoint/
+
+# ---- Local data ----
+# Synthea's generated population and every layer of pipeline output are
+# regenerable and can get large - keep them out of git entirely.
+synthea-data/
+data/
+!data/.gitkeep
+output/
+
+# ---- Databricks ----
+.databricks/
+.databricks-connect
+*.dbc
+databricks.cfg
+.databrickscfg
+
+# ---- Secrets / credentials ----
+# Databricks PAT, Kafka SASL creds if you ever add them, etc.
+.env
+.env.*
+*.pem
+*token*
+*secret*
+!tests/fixtures/**
+
+# ---- Docker ----
+docker-compose.override.yml
+
+# ---- OS / editor ----
+.DS_Store
+.idea/
+.vscode/
+*.swp
